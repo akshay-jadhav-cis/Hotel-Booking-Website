@@ -1,0 +1,50 @@
+/* body{
+    background-color: magenta;
+} */
+ .navbar{
+    height: 5rem;
+    background-color: white;
+ }
+ .fa-compass{
+    color: #fe4247;
+    font-size: 1.5rem;
+ }
+ .nav-link {
+    color:#222222 !important;
+ }
+ .nav-link:hover {
+  text-decoration: underline;
+}
+ .star-rating {
+  direction: ltr;
+  font-size: 2rem;
+}
+
+.star {
+  color: #e4e5e9;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0 0.2rem;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: #ffc107;
+}
+
+input[type="radio"]:checked + .star,
+input[type="radio"]:checked + .star ~ .star {
+  color: #ffc107;
+}
+
+.error-card {
+  background-color: #ffffff;
+  border-left: 5px solid #dc3545; /* Red border indicator */
+  transition: transform 0.3s ease;
+}
+
+.error-card:hover {
+  transform: scale(1.02);
+}
+#map { height: 400px;
+width: 80vh; }

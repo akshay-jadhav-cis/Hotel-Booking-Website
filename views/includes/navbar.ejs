@@ -1,0 +1,55 @@
+<style>
+  .custom-navbar {
+    background: linear-gradient(90deg, #e0f2f1, #ffffff); /* subtle mint to white */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* light shadow */
+  }
+
+  .custom-navbar .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .custom-navbar .nav-link:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+  }
+
+  .custom-navbar .navbar-brand {
+    font-weight: bold;
+    color: #00796b;
+  }
+
+  .custom-navbar .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<nav class="navbar navbar-expand-md custom-navbar fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-solid fa-compass me-2"></i>Wanderlust
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings/new">Add listings</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if(!currUser){ %>
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/signup">Signup</a>
+        <% } %>
+        <% if(currUser){ %>
+          <a class="nav-link" href="/logout">Logout</a>
+          <% } %>
+        
+      </div>
+    </div>
+  </div>
+</nav>
